@@ -5,26 +5,28 @@ class Solution(object):
         :rtype: List[str]
         """
         if not nums:
-            return []  # Handle the case where nums is empty
-
+            return []
+        
         result = []
-        start = nums[0]  # Start of the current range
-
+        start = nums[0]
+        
         for i in range(1, len(nums)):
-            # Check if the current number is not contiguous
             if nums[i] != nums[i - 1] + 1:
-                # Add the range to the result
                 if start == nums[i - 1]:
-                    result.append(str(start))  # Single number range
+                    result.append(str(start))
                 else:
-                    result.append(f"{start}->{nums[i - 1]}")  # Multi-number range
-                # Update the start of the next range
+                    result.append(f"{start}->{nums[i - 1]}")
                 start = nums[i]
-
-        # Add the last range
+        
+        # Handle the last range
         if start == nums[-1]:
             result.append(str(start))
         else:
             result.append(f"{start}->{nums[-1]}")
-
+        
         return result
+
+# Example usage:
+solution = Solution()
+print(solution.summaryRanges([0, 1, 2, 4, 5, 7]))  # Output: ["0->2","4->5","7"]
+print(solution.summaryRanges([0, 2, 3, 4, 6, 8, 9]))  # Output: ["0","2->4","6","8->9"]
