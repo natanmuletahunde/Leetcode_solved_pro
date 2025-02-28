@@ -10,7 +10,7 @@ class Solution(object):
 
         for char in s:
             if char.isdigit():
-                num = num * 10 + int(char)  # Build multi-digit numbers
+                num = num * 10 + int(char)  
             elif char == "[":
                 stack.append(current_str)
                 stack.append(num)
