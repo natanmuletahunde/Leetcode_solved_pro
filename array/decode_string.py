@@ -14,13 +14,14 @@ class Solution(object):
             elif char == "[":
                 stack.append(current_str)
                 stack.append(num)
-                current_str = ""  # Reset for the new substring
-                num = 0  # Reset number
+                current_str = ""  
+                num = 0  
             elif char == "]":
                 count = stack.pop()
                 prev_str = stack.pop()
                 current_str = prev_str + current_str * count  # Decode substring
             else:
-                current_str += char  # Append letters
+                current_str += char 
 
         return current_str
+e
