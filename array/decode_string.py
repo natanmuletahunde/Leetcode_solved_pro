@@ -19,9 +19,8 @@ class Solution(object):
             elif char == "]":
                 count = stack.pop()
                 prev_str = stack.pop()
-                current_str = prev_str + current_str * count  # Decode substring
+                current_str = prev_str + current_str * count  #
             else:
                 current_str += char 
 
         return current_str
-e
