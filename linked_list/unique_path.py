@@ -26,7 +26,7 @@ class Solution(object):
             if obstacleGrid[0][j] == 0:
                 dp[0][j] = dp[0][j-1]
         
-        # Fill the rest of the dp table
+     
         for i in range(1, m):
             for j in range(1, n):
                 if obstacleGrid[i][j] == 0:  # No obstacle
