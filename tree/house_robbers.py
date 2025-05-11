@@ -9,9 +9,8 @@ class Solution(object):
         if len(nums) == 1:
             return nums[0]
         
-        # Initialize two variables to store max amounts
-        prev1 = 0  # max amount till the house before previous
-        prev2 = 0  # max amount till previous house
+        prev1 = 0 
+        prev2 = 0
         
         for num in nums:
             temp = max(prev1 + num, prev2)
