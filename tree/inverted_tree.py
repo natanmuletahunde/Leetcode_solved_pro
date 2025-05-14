@@ -2,10 +2,6 @@ from collections import deque
 
 class Solution(object):
     def invertTree(self, root):
-        """
-        :type root: Optional[TreeNode]
-        :rtype: Optional[TreeNode]
-        """
         # Edge case: if the tree is empty
         if not root:
             return None
