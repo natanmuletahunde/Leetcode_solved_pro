@@ -5,7 +5,7 @@ class Solution(object):
         :rtype: Optional[ListNode]
         """
         if not head or not head.next:
-            return head  # If empty list or single node, return as is
+            return head
         
         dummy = ListNode(0, head)
         prev = dummy
